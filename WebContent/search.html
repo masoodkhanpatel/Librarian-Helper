@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Search</title>
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <style type="text/css">
+            #pic{
+                height:400px;
+                width: 300px;
+                position: absolute;
+                left: 40%;
+                top: 20%;
+            }
+            #s{
+                position: absolute;
+                left: 20%;
+                top:20%;
+            }
+        input[type=text] {
+		    width: 200px;
+		    box-sizing: border-box;
+		    border: 2px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-image: url('');
+		    background-position: 10px 10px; 
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+            }
+
+            input[type=text]:focus {
+                width: 100%;
+            }
+            .button {
+              border-radius: 4px;
+              background-color: darkgray;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 10px;
+              padding: 20px;
+              width: 100px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+            }
+
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+
+            .button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+
+            .button:hover span {
+              padding-right: 25px;
+            }
+
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="s">
+        <form action="search.jsp" method="post">
+            <p><input type="text" name="rollno" placeholder="Search by Roll No."></p>
+            <button class="button" type="submit"><span>SEARCH</span></button>
+        </form>
+        <form action="search1.jsp" method="post">
+            <p><input type="text" name="bookid" placeholder="Search by Book Id"></p>
+            <button class="button" type="submit"><span>SEARCH</span></button>
+        </form>
+            </div>
+        <div ><img id="pic" src="images/searchd.jpg"></div>
+    </body>
+</html>

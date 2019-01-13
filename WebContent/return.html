@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Return</title>
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="jquery-min.js"></script>
+        <style type="text/css">
+             body,html{        
+                height: 100%;
+                margin: 0;
+            }
+            .bg {
+        
+                background-image: url(images/return.jpg);
+
+                height: 100%; 
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #f{
+                position: absolute;
+                top: 0%;
+                left: 15%;
+            }
+            $full:100%;
+            $auto:0 auto;
+            $align:center;
+
+            @mixin disable{
+              outline:none;
+              border:none;
+            }
+
+            @mixin easeme{
+              -webkit-transition:1s ease;
+              -moz-transition:1s ease;
+              -o-transition:1s ease;
+              -ms-transition:1s ease;
+              transition:1s ease;
+            }
+
+            /*site container*/
+            .wrapper{
+              width:420px;
+              margin:$auto;
+            }
+
+            h1{
+              text-align:$align;
+              padding:30px 0px 0px 0px;
+              font:25px Oswald;
+              color:#FFFF;
+              text-transform:uppercase;
+              margin:0px;
+            }
+
+            p{
+              font:13px Open Sans;
+              color:#6E6E6E;
+              <!--text-shadow:#000 0px 1px 5px;-->
+              margin-bottom:30px;
+              font-weight: bold;
+            }
+
+            .form{
+              width:$full;
+            }
+
+            input[type="text"],input[type="date"]{
+              font-weight: bold;
+              width:98%;
+              padding:15px 0px 15px 8px;
+              border-radius:5px;
+              box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+                background:rgba(0,0,0,0.2);
+              @include disable;
+              border:1px solid rgba(0,0,0,1);
+              margin-bottom:10px;
+              color:#FFFF;
+             
+            }
+
+            input[type="submit"]{
+              font-weight: bold;
+              width:100%;
+              padding:15px;
+              border-radius:5px;
+              @include disable;
+              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+              background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+              background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+              background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+              background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+              font:14px Oswald;
+              color:#FFF;
+              text-transform:uppercase;
+              text-shadow:#000 0px 1px 5px;
+              border:1px solid #000;
+              opacity:0.7;
+                -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+              -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+                box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+              border-top:1px solid rgba(255,255,255,0.8)!important;
+              -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+            }
+
+            input:focus{
+              box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+              background:rgba(0,0,0,0.3);
+              @include easeme;
+            }
+
+            input[type="submit"]:hover{
+              opacity:1;
+              cursor:pointer;
+            }
+
+            .name-help,.email-help{
+              display:none;
+              padding:0px;
+              margin:0px 0px 15px 0px;
+            }
+
+            .optimize{
+              position:fixed;
+              right:3%;
+              top:0px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="bg">
+            <div id="f" class="wrapper">
+                 <h1>&emsp;Return Book</h1>
+        <form class="form" method="post" action="return.jsp">
+            <input type="text" class="name" placeholder="Book ID" name="bookid" required>
+            <div>
+              <p class="name-help">Please enter the id of the book being returned</p>
+            </div>
+            <p>Return Date:<input class="email" type="date" name="date" required ></p>
+             <div>
+              <p class="email-help">Please select the date of return</p>
+            </div>
+            <p><input type="submit" value="Return"></p>
+        </form>       
+        </div>
+        </div>
+        <script type="text/javascript">
+                        $(".name").focus(function(){
+              $(".name-help").slideDown(500);
+            }).blur(function(){
+              $(".name-help").slideUp(500);
+            });
+
+            $(".email").focus(function(){
+              $(".email-help").slideDown(500);
+            }).blur(function(){
+              $(".email-help").slideUp(500);
+            });
+        </script>
+    </body>
+</html>
