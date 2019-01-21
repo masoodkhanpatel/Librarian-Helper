@@ -30,6 +30,6 @@ Set the run configuration to run on Apache Tomcat server. You are good to go.
 
 ![add page](https://raw.githubusercontent.com/resilientmax/Librarian-Helper/master/readmeimages/add.png)
 
-![return page](https://github.com/resilientmax/Librarian-Helper/blob/master/readmeimages/return.png?raw=true)
+![return page](https://raw.githubusercontent.com/resilientmax/Librarian-Helper/master/readmeimages/return.png)
 
 ![take page](https://raw.githubusercontent.com/resilientmax/Librarian-Helper/master/readmeimages/take.png)
