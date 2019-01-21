@@ -20,3 +20,16 @@ Install the above requirements. Create a database in phpMyAdmin with the name `l
 
 Import the project files into the Eclipse IDE and update your respective database username and password as what you have set. Also, update the port numbers that are on your system.
 
+Set the run configuration to run on Apache Tomcat server. You are good to go.
+
+---
+
+## Some pages...
+
+![resgister page](https://raw.githubusercontent.com/resilientmax/Librarian-Helper/master/readmeimages/register.png)
+
+![add page](https://raw.githubusercontent.com/resilientmax/Librarian-Helper/master/readmeimages/add.png)
+
+![return page](https://github.com/resilientmax/Librarian-Helper/blob/master/readmeimages/return.png?raw=true)
+
+![take page](https://raw.githubusercontent.com/resilientmax/Librarian-Helper/master/readmeimages/take.png)
